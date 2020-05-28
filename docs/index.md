@@ -17,3 +17,5 @@ Add code here
 #### Figure 1. The code from lab 07  
 ![lab code 07](07_labcode.PNG "lab 7 code")
 #### Figure 1. The code from lab 07  
+![lab code 07](./images/07_labcode.PNG "lab 7 code")
+#### Figure 1. The code from lab 07 
