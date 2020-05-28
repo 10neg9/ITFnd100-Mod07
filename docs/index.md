@@ -15,3 +15,5 @@ Add code here
 
 ![lab code 07](https://10neg9.github.io/ITFnd100-Mod07/07_labcode.PNG "lab 7 code")
 #### Figure 1. The code from lab 07  
+![lab code 07](07_labcode.PNG "lab 7 code")
+#### Figure 1. The code from lab 07  
