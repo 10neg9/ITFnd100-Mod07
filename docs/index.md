@@ -7,7 +7,11 @@ Assignment07
 # Python: Pickling Data and Exception Handling
 ## Introduction
 In this paper I will explain how to pickle (and unpickle) objects and how to handle exceptions in Python.  
-The code used for this assignment can be found [here](https://github.com/10neg9/IntroToProg-Python-Mod07/blob/master/Assignment07.py).  
+
+The code used for this assignment can be found [here](../Assignment07.py). 
+
+A Word document of this assignment can be found [here](../Assignment07.docx).  
+
 ## What is pickle?
 pickle is a Python module. As such, it must be imported with the import statement, see Figure 1.
 ```
