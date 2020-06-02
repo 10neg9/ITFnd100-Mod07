@@ -43,7 +43,7 @@ pickling.close()  # close the file
 #### *Figure 4. Pickling an Object*
 Running the code in Figure 4 results in the object type printing to screen (because of the print statement, which I did not mention earlier) and writing the object debutAlbums to the debuts.dat file. The class type of pickling is _io.BufferedWriter. The debuts.dat file is shown in Figure 5.  
 
-![debuts.dat binary file](./images/figure5.png "debuts.dat")
+![Figure 5](./images/figure5.png "debuts.dat binary file")
 #### *Figure 5. debuts.dat Binary File*
 The debuts.dat binary file is not human readable. I can pick out a few words, but most of the characters make sense to me. This is how binary files are stored. It is completely readable by the computer. Do not confuse this with the file being encrypted. Because anyone can unpickle the contents of the file to read it. And that is what I explain next.
 ## How do you Unpickle?
@@ -56,6 +56,25 @@ unpickling = open("debuts.dat", "rb")  # open binary file for reading
 debutAlbumsUP = pickle.load(unpickling)  # de-serialization i.e. unpickling
 unpickling.close()  # close the file
 ```
+#### *Figure 6. Unpickling an Object*
+To see what is stored in debutAlbumsUP I use the print() function. I also use a print function to check that the data type is list which is what I am expecting because I initially started with a list of dictionary elements, debutAlbums, that was pickled and then unpickled.
+```
+print(debutAlbumsUP)  # print to check that it worked
+print(type(debutAlbumsUP))  # check the data type
+```
+#### *Figure 7. Print() Functions*
+The print statements of Figure 7 printed the text shown in Figure 8. Indeed, the original list was printed to screen and debutAlbumsUP is type list.
+![Figure 8](./images/figure8.png "Result of print() Function")
+#### *Figure 8. Result of print() Function in Figure 7*
+## Additional Resources on Pickle
+Here is a list of additional resources that discuss pickling and unpickling:  
+•	https://www.youtube.com/watch?v=2Tw39kZIbhs (external site) – great introduction to pickle  
+•	https://docs.python.org/3/library/pickle.html (external site) – all the ins and outs of pickle  
+•	https://www.geeksforgeeks.org/understanding-python-pickling-example/ (external site) – provides a nice example of pickling without a file  
+## Exception Handling
+Exception handling is a way to handle errors that arise during the execution of code. Errors can result because of bad user inputs, or missing files, or bad programming. There are many reasons that an error might occur. If an error occurs in a script that does not have exception handling, the script will exit with an error and print the error to the screen that is not usually understood by the user. Exception handling is a way to capture these errors, provide useful messages to the user, and allow the program to continue running. In Python, we use the try statement to handle exceptions.
+## Try Statement
+A try statement consists of a try clause and an except clause. And there can be multiple except clauses. The try clause begins with the keyword “try” followed by a colon, followed by an indented block of code. It is in this indented block that you place code to be “checked” for errors. The code in the block will try to run. If there are no exceptions the code will execute as intended. If an error is encountered the script will jump to the except clause.
 
 
 
@@ -67,20 +86,3 @@ unpickling.close()  # close the file
 
 
 ## Summary
-
-
-**Dev:** *NSmith*  
-**Date:** *1.1.2020*  
-
-
-```
-Add code here
-```
-#### Listing 1  
-
-![lab code 07](https://10neg9.github.io/ITFnd100-Mod07/07_labcode.PNG "lab 7 code")
-#### Figure 1. The code from lab 07  
-![lab code 07](07_labcode.PNG "lab 7 code")
-#### Figure 1. The code from lab 07  
-![lab code 07](./images/07_labcode.PNG "lab 7 code")
-#### Figure 1. The code from lab 07 
