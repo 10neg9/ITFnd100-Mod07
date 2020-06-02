@@ -1,4 +1,10 @@
-# Title
+Nathaniel Smith  
+June 1, 2020  
+Foundations of Programming: Python (IT FDN 100 A Sp 20)  
+Assignment07  
+
+
+# Python: Pickling Data and Exception Handling
 ## Introduction
 ### Topic 1
 ## Summary
