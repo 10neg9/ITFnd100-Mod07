@@ -75,10 +75,77 @@ Here is a list of additional resources that discuss pickling and unpickling:
 Exception handling is a way to handle errors that arise during the execution of code. Errors can result because of bad user inputs, or missing files, or bad programming. There are many reasons that an error might occur. If an error occurs in a script that does not have exception handling, the script will exit with an error and print the error to the screen that is not usually understood by the user. Exception handling is a way to capture these errors, provide useful messages to the user, and allow the program to continue running. In Python, we use the try statement to handle exceptions.
 ## Try Statement
 A try statement consists of a try clause and an except clause. And there can be multiple except clauses. The try clause begins with the keyword “try” followed by a colon, followed by an indented block of code. It is in this indented block that you place code to be “checked” for errors. The code in the block will try to run. If there are no exceptions the code will execute as intended. If an error is encountered the script will jump to the except clause.
-
-
-
-
+## Except Clause
+The except clause begins with the “except” keyword, followed by named exceptions, followed by a colon, followed by an indented block of code. The script will check if the named exception or exceptions of the except clause matches the exception from the try clause. If so, the block statement of the except clause will execute. This behavior is similar to if-else statements in that only the first else statement that evaluates to True executes; the others will be skipped even if they would evaluate to True. Similarly, In the try statement, only the first except clause to have a match executes. If there are no matching except clauses the script will exit with an error just as it would if there had been no try statement.
+## Try Statement Example
+Let’s take a look at the simple try statement in Figure 9.
+```
+try:
+    strData= input("Give me a number: ")
+    strData = (1 + strData)
+except Exception:
+    print("You done messed up kid!")
+    print("You know you can't add numbers to strings!")
+```
+#### *Figure 9. Simple Try Statement*
+The try block will ask the user to input a number and then tries to add 1 to the variable strData. Because strData will always be a string, even if the user entered a number, and because you cannot add integers to strings, this will cause an error. The except clause will handle this error. The named exception is Exception and this is the built-in common base class for all non-exit exceptions. Meaning that this clause will match all built-in exception types. Figure 10 shows the result of running this code in PyCharm.
+![Figure 10](./images/figure10.png "Running Try-Except")
+#### *Figure 10. Running Try-Except*
+## Error Message
+Running the code outside of the try statement results in the error message shown in Figure 11.
+![Figure 11](./images/figure11.png "TypeError Error Message")
+#### *Figure 11. TypeError Error Message*
+## Matching Exception Types
+Now I am going to spruce up the code a bit from Figure 9, see Figure 12 below.
+```
+try:
+    strData= input("Give me a number: ")
+    strData = (1 + strData)
+except TypeError as e:
+    print("You done messed up kid!")
+    print("You know you can't add numbers to strings!")
+    print(f'Or as Python would say..."{e}"')
+except Exception:
+    print('an error occurred...be careful.')
+```
+#### *Figure 12. Try Statement with Two Except Clauses*
+I added a new exception clause to check if the named exception type is TypeError. I know from running the faulty code that it will generate a TypeError error. I still have the except clause that checks for a match to any exception belonging to the base class Exception. This clause is intentionally at the end of the try statement as it will only execute if the error does not match TypeError. Let’s see the code in action, see Figure 13.
+![Figure 13](./images/figure13.png "Try Statement in Action")
+#### *Figure 13. Try Statement in Action*
+I added a little something extra to this that I did not already mention. I used the as clause in the first except statement to associate the exception being passed to the name e and then I used the name e in a print statement to print some useful information about the exception.
+## Else Clause
+The try statement can also have an else clause. The else clause will only execute if the block statement of the try clause has no errors. This is a great place to put code that is not expected to trigger any errors like the code being “checked” in the try clause.
+## Finally Clause
+A finally clause will execute no matter what. If no exception is raised, the finally clause is executed. If an exception is raised, the finally clause will execute. I do not yet see how this is useful, but I did add it to my code.
+## Raise an Exception
+It is also possible to raise an exception with the raise statement. See the code in Figure 14.
+```
+try:
+    strData= input("Give me a number: ")
+    if not strData.isnumeric(): 
+        raise ValueError('Give me a number, please.')  # raise ValueError
+except TypeError as e:
+    print("You done messed up kid!")
+    print("You know you can't add numbers to strings!")
+    print(f'Or as Python would say..."{e}"')
+except ZeroDivisionError as e:
+    print("Don't worry, it's not you it's me.")
+    print("I guess I should write better code.")
+    print(f'Python had this to say about it, "{e}"')
+except ValueError as e:
+    print("Why you messing with me?")
+    print(f"I asked for a number and you give me '{strData}'?!")
+    print(f'This is what Python thinks about it: "{e}"')
+except Exception as e:
+    print(e)
+else:
+    print('We had no errors!')
+finally:
+    print('Errors or not, this will execute.')
+```
+![Figure 14](./images/figure14.png "Raise Exception")
+#### *Figure 14. Raise Exception*
+If the user does not enter a number, the raise statement is executed which forces the ValueError exception to occur. And the statement “Give me a number, please.” gets passed to ValueError. Figure 15 shows what happens if you run the code and the user does not enter a number.
 
 
 
