@@ -118,7 +118,7 @@ The try statement can also have an else clause. The else clause will only execut
 ## Finally Clause
 A finally clause will execute no matter what. If no exception is raised, the finally clause is executed. If an exception is raised, the finally clause will execute. I do not yet see how this is useful, but I did add it to my code.
 ## Raise an Exception
-It is also possible to raise an exception with the raise statement. See the code in Figure 14.
+It is also possible to raise an exception with the raise statement. See the code in Figure 14, paying attention to the raise statement of the try clause.
 ```
 try:
     strData= input("Give me a number: ")
@@ -146,10 +146,15 @@ finally:
 ![Figure 14](./images/figure14.png "Raise Exception")
 #### *Figure 14. Raise Exception*
 If the user does not enter a number, the raise statement is executed which forces the ValueError exception to occur. And the statement “Give me a number, please.” gets passed to ValueError. Figure 15 shows what happens if you run the code and the user does not enter a number.
-
-
-
-
-
-
+![Figure 15](./images/figure15.png "User Does Not Enter a Number")
+#### *Figure 15. User Does Not Enter a Number*
+Figure 16 shows what happens when the user enters a number. Note that the else clause executes and the message “We had no errors!” is printed to the screen. Also, note that in both cases the finally clause executes and the message, “Errors or not, this will execute” was printed to screen.
+![Figure 16](./images/figure16.png "User Enters a Number")
+#### *Figure 16. User Enters a Number*
+## Additional Resources on Exception Handling
+Here is a list of additional resources that discuss exception handling:  
+•	https://www.youtube.com/watch?v=NIWwJbo-9_8 (external site) – great video showing use of multiple exceptions, else clause, and finally clause  
+•	https://www.learnpython.org/en/Exception_Handling (external site) – tutorial on exception handling that also includes examples that the student can run in a Python shell on the website  
+•	https://docs.python.org/3.3/tutorial/errors.html (external site) – all the details of exception handling straight from the source  
 ## Summary
+In summary, I showed how easy it is to pickle objects into a binary file and then unpickle the binary file back into an object. I also showed how to handle errors with the try statement.
