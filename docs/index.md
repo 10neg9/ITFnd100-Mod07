@@ -63,7 +63,8 @@ print(debutAlbumsUP)  # print to check that it worked
 print(type(debutAlbumsUP))  # check the data type
 ```
 #### *Figure 7. Print() Functions*
-The print statements of Figure 7 printed the text shown in Figure 8. Indeed, the original list was printed to screen and debutAlbumsUP is type list.
+The print statements of Figure 7 printed the text shown in Figure 8. Indeed, the original list was printed to screen and debutAlbumsUP is type list.  
+
 ![Figure 8](./images/figure8.png "Result of print() Function")
 #### *Figure 8. Result of print() Function in Figure 7*
 ## Additional Resources on Pickle
@@ -89,11 +90,13 @@ except Exception:
     print("You know you can't add numbers to strings!")
 ```
 #### *Figure 9. Simple Try Statement*
-The try block will ask the user to input a number and then tries to add 1 to the variable strData. Because strData will always be a string, even if the user entered a number, and because you cannot add integers to strings, this will cause an error. The except clause will handle this error. The named exception is Exception and this is the built-in common base class for all non-exit exceptions. Meaning that this clause will match all built-in exception types. Figure 10 shows the result of running this code in PyCharm.
+The try block will ask the user to input a number and then tries to add 1 to the variable strData. Because strData will always be a string, even if the user entered a number, and because you cannot add integers to strings, this will cause an error. The except clause will handle this error. The named exception is Exception and this is the built-in common base class for all non-exit exceptions. Meaning that this clause will match all built-in exception types. Figure 10 shows the result of running this code in PyCharm.  
+
 ![Figure 10](./images/figure10.png "Running Try-Except")
 #### *Figure 10. Running Try-Except*
 ## Error Message
-Running the code outside of the try statement results in the error message shown in Figure 11.
+Running the code outside of the try statement results in the error message shown in Figure 11.  
+
 ![Figure 11](./images/figure11.png "TypeError Error Message")
 #### *Figure 11. TypeError Error Message*
 ## Matching Exception Types
@@ -110,7 +113,8 @@ except Exception:
     print('an error occurred...be careful.')
 ```
 #### *Figure 12. Try Statement with Two Except Clauses*
-I added a new exception clause to check if the named exception type is TypeError. I know from running the faulty code that it will generate a TypeError error. I still have the except clause that checks for a match to any exception belonging to the base class Exception. This clause is intentionally at the end of the try statement as it will only execute if the error does not match TypeError. Let’s see the code in action, see Figure 13.
+I added a new exception clause to check if the named exception type is TypeError. I know from running the faulty code that it will generate a TypeError error. I still have the except clause that checks for a match to any exception belonging to the base class Exception. This clause is intentionally at the end of the try statement as it will only execute if the error does not match TypeError. Let’s see the code in action, see Figure 13.  
+
 ![Figure 13](./images/figure13.png "Try Statement in Action")
 #### *Figure 13. Try Statement in Action*
 I added a little something extra to this that I did not already mention. I used the as clause in the first except statement to associate the exception being passed to the name e and then I used the name e in a print statement to print some useful information about the exception.
@@ -145,10 +149,12 @@ finally:
     print('Errors or not, this will execute.')
 ```
 #### *Figure 14. Raise Exception*
-If the user does not enter a number, the raise statement is executed which forces the ValueError exception to occur. And the statement “Give me a number, please.” gets passed to ValueError. Figure 15 shows what happens if you run the code and the user does not enter a number.
+If the user does not enter a number, the raise statement is executed which forces the ValueError exception to occur. And the statement “Give me a number, please.” gets passed to ValueError. Figure 15 shows what happens if you run the code and the user does not enter a number.  
+
 ![Figure 15](./images/figure15.png "User Does Not Enter a Number")
 #### *Figure 15. User Does Not Enter a Number*
-Figure 16 shows what happens when the user enters a number. Note that the else clause executes and the message “We had no errors!” is printed to the screen. Also, note that in both cases the finally clause executes and the message, “Errors or not, this will execute” was printed to screen.
+Figure 16 shows what happens when the user enters a number. Note that the else clause executes and the message “We had no errors!” is printed to the screen. Also, note that in both cases the finally clause executes and the message, “Errors or not, this will execute” was printed to screen.  
+
 ![Figure 16](./images/figure16.png "User Enters a Number")
 #### *Figure 16. User Enters a Number*
 ## Additional Resources on Exception Handling
