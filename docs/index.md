@@ -71,6 +71,7 @@ Here is a list of additional resources that discuss pickling and unpickling:
 - [https://www.youtube.com/watch?v=2Tw39kZIbhs](https://www.youtube.com/watch?v=2Tw39kZIbhs) (external site) – great introduction to pickle  
 - [https://docs.python.org/3/library/pickle.html](https://docs.python.org/3/library/pickle.html) (external site) – all the ins and outs of pickle  
 - [https://www.geeksforgeeks.org/understanding-python-pickling-example/](https://www.geeksforgeeks.org/understanding-python-pickling-example/) (external site) – provides a nice example of pickling without a file  
+
 ## Exception Handling
 Exception handling is a way to handle errors that arise during the execution of code. Errors can result because of bad user inputs, or missing files, or bad programming. There are many reasons that an error might occur. If an error occurs in a script that does not have exception handling, the script will exit with an error and print the error to the screen that is not usually understood by the user. Exception handling is a way to capture these errors, provide useful messages to the user, and allow the program to continue running. In Python, we use the try statement to handle exceptions.
 ## Try Statement
@@ -155,5 +156,6 @@ Here is a list of additional resources that discuss exception handling:
 - [https://www.youtube.com/watch?v=NIWwJbo-9_8](https://www.youtube.com/watch?v=NIWwJbo-9_8) (external site) – great video showing use of multiple exceptions, else clause, and finally clause  
 - [https://www.learnpython.org/en/Exception_Handling](https://www.learnpython.org/en/Exception_Handling) (external site) – tutorial on exception handling that also includes examples that the student can run in a Python shell on the website  
 - [https://docs.python.org/3.3/tutorial/errors.html](https://docs.python.org/3.3/tutorial/errors.html) (external site) – all the details of exception handling straight from the source  
+
 ## Summary
 In summary, I showed how easy it is to pickle objects into a binary file and then unpickle the binary file back into an object. I also showed how to handle errors with the try statement.
