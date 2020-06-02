@@ -42,7 +42,20 @@ pickling.close()  # close the file
 ```
 #### *Figure 4. Pickling an Object*
 Running the code in Figure 4 results in the object type printing to screen (because of the print statement, which I did not mention earlier) and writing the object debutAlbums to the debuts.dat file. The class type of pickling is _io.BufferedWriter. The debuts.dat file is shown in Figure 5.  
+
 ![debuts.dat binary file](./images/figure5.png "debuts.dat")
+#### *Figure 5. debuts.dat Binary File*
+The debuts.dat binary file is not human readable. I can pick out a few words, but most of the characters make sense to me. This is how binary files are stored. It is completely readable by the computer. Do not confuse this with the file being encrypted. Because anyone can unpickle the contents of the file to read it. And that is what I explain next.
+## How do you Unpickle?
+Unpickling is just as easy as pickling. First, the pickle module is imported. Second, a binary object file is opened with the open() function, but this time with access mode ‘rb’. Finally, the pickle.load() function is used to unpickle the file into a variable i.e. de-serialize the data in the file into an object. This code is shown in Figure 6.
+```
+import pickle
+
+# unpickling an object
+unpickling = open("debuts.dat", "rb")  # open binary file for reading
+debutAlbumsUP = pickle.load(unpickling)  # de-serialization i.e. unpickling
+unpickling.close()  # close the file
+```
 
 
 
