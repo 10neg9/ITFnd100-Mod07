@@ -41,8 +41,8 @@ print(type(pickling))
 pickling.close()  # close the file
 ```
 #### *Figure 4. Pickling an Object*
-Running the code in Figure 4 results in the object type printing to screen (because of the print statement, which I did not mention earlier) and writing the object debutAlbums to the debuts.dat file. The class type of pickling is _io.BufferedWriter. The debuts.dat file is shown in Figure 5.
-
+Running the code in Figure 4 results in the object type printing to screen (because of the print statement, which I did not mention earlier) and writing the object debutAlbums to the debuts.dat file. The class type of pickling is _io.BufferedWriter. The debuts.dat file is shown in Figure 5.  
+![debuts.dat binary file](./images/figure5.PNG "debuts.dat")
 
 
 
