@@ -143,7 +143,6 @@ else:
 finally:
     print('Errors or not, this will execute.')
 ```
-![Figure 14](./images/figure14.png "Raise Exception")
 #### *Figure 14. Raise Exception*
 If the user does not enter a number, the raise statement is executed which forces the ValueError exception to occur. And the statement “Give me a number, please.” gets passed to ValueError. Figure 15 shows what happens if you run the code and the user does not enter a number.
 ![Figure 15](./images/figure15.png "User Does Not Enter a Number")
